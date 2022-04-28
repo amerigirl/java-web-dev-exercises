@@ -24,6 +24,7 @@ public class CarTest {
         assertEquals(10,10,.001);
     }
 
+
     //TODO: constructor sets gasTankLevel properly
 
     @Test
@@ -47,13 +48,14 @@ public class CarTest {
 
     public void driveCheck() {
         this.test_car.drive(50);
-        assertEquals(10, test_car.getGasTankLevel(), .001);
+        //create a new instance here before you do the assert.  But, how did we get to the 9??  Is ther ea formula?
+        assertEquals(9, test_car.getGasTankLevel(), .001);
     }
 
     //TODO: gasTankLevel is accurate after attempting to drive past tank range
-public void gastankAccuracy() {
-        assertT
-}
+//public void gastankAccuracy() {
+//        assertT
+//}
 
     //TODO: can't have more gas than tank size, expect an exception
 

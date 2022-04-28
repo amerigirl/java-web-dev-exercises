@@ -8,7 +8,7 @@ public class Student {
     private int numberOfCredits = 0;
     private double gpa = 0.0;
 
-    public Student (String name, int studentId, int numberOfCredits, double gpa) {
+    public Student(String name, int studentId, int numberOfCredits, double gpa) {
         this.name = name;
         this.studentId = studentId;
         this.numberOfCredits = numberOfCredits;
@@ -29,14 +29,28 @@ public class Student {
     }
 
 
-     //TODO: Uncomment and complete the getGradeLevel method here:
-//    public String getGradeLevel() {
-//        // Determine the grade level of the student based on numberOfCredits
-//    }
+    //TODO: Uncomment and complete the getGradeLevel method here:
+    public String getGradeLevel() {
+
+        String newGradeLevel = "";
+
+        if (this.numberOfCredits > 0 && this.numberOfCredits <= 29) {
+            System.out.println("This student is a Freshmen.");
+        } else if (this.numberOfCredits >= 30 && this.numberOfCredits <= 59) {
+            System.out.println("This student is a Sophomore");
+        } else if (this.numberOfCredits >= 60 && this.numberOfCredits <= 89) {
+            System.out.println("this student is a Junior");
+        } else if (this.numberOfCredits >= 90) {
+            System.out.println("This student is a Senior");
+        }
+        return newGradeLevel;
+    }
+
 
     // TODO: Complete the addGrade method.
     public void addGrade(int courseCredits, double grade) {
         // Update the appropriate fields: numberOfCredits, gpa
+
     }
 
     // TODO: Add your custom 'toString' method here. Make sure it returns a well-formatted String rather
@@ -87,3 +101,4 @@ public class Student {
         System.out.println(sally);
     }
 }
+
