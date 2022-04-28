@@ -67,9 +67,9 @@ public class Car {
      * Adjust fuel levels based on amount needed to drive the distance requested.
      * Add miles to odometer.
      *
-     * @param miles - the miles to drive
+     * @param i
      */
-    public void drive(double miles)
+    public void drive(int i)
     {
         //adjust fuel based on mpg and miles requested to drive
         double maxDistance = this.milesPerGallon * this.gasTankLevel;
@@ -79,6 +79,7 @@ public class Car {
          * otherwise, if miles is not greater than maxDistance,
          * then milesAbleToTravel = miles
          */
+        double miles = 0;
         double milesAbleToTravel = miles > maxDistance ? maxDistance : miles;
         double gallonsUsed = milesAbleToTravel / this.milesPerGallon;
         this.gasTankLevel = this.gasTankLevel - gallonsUsed;
